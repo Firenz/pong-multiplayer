@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 65975739494741548}
   - component: {fileID: 23747151212991642}
   - component: {fileID: 54903934482733314}
+  - component: {fileID: 114633603746910412}
   m_Layer: 0
   m_Name: Paddle
   m_TagString: Untagged
@@ -92,10 +93,10 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
+  m_IsKinematic: 0
+  m_Interpolate: 1
   m_Constraints: 120
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!65 &65975739494741548
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -108,3 +109,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114633603746910412
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1995888929451556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eff8e852a6b0412459857a9a1b56f9d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 8
+  axis: Vertical
