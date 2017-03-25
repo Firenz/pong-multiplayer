@@ -27,7 +27,7 @@ public class BallMovement : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == "P1" || collision.gameObject.tag == "P2")
+        if(collision.gameObject.tag == "Player")
         {
             ChangeDirection(collision);
             AudioSource.PlayClipAtPoint(bouncingPaddleSound, thisTransform.position);
