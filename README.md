@@ -16,10 +16,20 @@ In this mode, the left paddle is controlled by player one and the right paddle i
 - P1: WASD keys. Also it is supposed to work with the joystick of the gamepad considered of the player one, but it wasn't tested.
 - P2: Arrow keys. Also it is supposed to work with the joystick of the gamepad considered of the player two, but it wasn't tested.
 
+### **Online multiplayer**
+In this mode, the player is controlling the paddle that appears in blue. The objective is to score by making the ball hit the wall opposite of the paddle you're controlling. 
+
+**Controls**
+
+WASD or arrow keys. Also it is supposed to work with gamepad joysticks, but it wasn't tested.
+
 ## Customizing Controls
 Player controls can be customized by changing it in *Edit > Project Settings > Input*. Under the tags of *Vertical*, *VerticalP1* and *VerticalP2*.
 
 Info of the used conventions for key names for inputs in the Input Manager [here](https://docs.unity3d.com/Manual/ConventionalGameInput.html).
+
+## What to expect in the future
+Basic online multiplayer is up but with the old default GUI of Unity. So the next step it will be making a simple menu with Unity UI with the options to start Host/Client in LAN.
 
 ## License
 Licensed under MIT License.
