@@ -313,7 +313,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c08fd35f2e1c81c479e3ef39bde1bd17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paddlePrefab: {fileID: 0}
   ballPrefab: {fileID: 1848671756847470, guid: d4ff9f6be380e5746a92e546432a356d, type: 2}
   leftWallPrefab: {fileID: 1155498016688810, guid: 950fcec1e3dd22b439cb76caccdd0f0b,
     type: 2}
@@ -536,7 +535,7 @@ GameObject:
   - component: {fileID: 791631327}
   - component: {fileID: 791631326}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: OnlineScoreCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

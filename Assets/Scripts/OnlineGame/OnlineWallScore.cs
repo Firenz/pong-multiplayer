@@ -12,42 +12,39 @@ public class OnlineWallScore : NetworkBehaviour {
     private string player = "P1";
     private Text txt_score;
 
-    [SyncVar(hook = "AddScore")]
+    [SyncVar(hook = "OnScoreChanged")]
     private int score = 0;
     #endregion
-
-    private void Start ()
-    {
-        try
-        {
-            txt_score = GameObject.Find("Score" + player).GetComponent<Text>();
-            txt_score.text = score.ToString();
-        }
-        catch (NullReferenceException)
-        {
-            Debug.LogError("[" + this.gameObject.GetInstanceID() + "] " + this.name + " doesn't have a Text component assigned");
-        }
-	}
 
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.tag == "Ball")
         {
-            AddScore();
+            CmdAddScore();
         }
     }
 
-    private void AddScore(int amount = 0)
+    [Command]
+    private void CmdAddScore()
     {
         score++;
+    }
 
+    private void OnScoreChanged(int newScore)
+    {
         try
         {
-            txt_score.text = score.ToString();
+            txt_score.text = newScore.ToString();
         }
         catch (NullReferenceException)
         {
             Debug.LogError("[" + this.gameObject.GetInstanceID() + "] " + this.name + " doesn't have a Text component assigned");
         }
+    }
+
+    public override void OnStartClient()
+    {
+        txt_score = GameObject.Find("Score" + player).GetComponent<Text>();
+        OnScoreChanged(score);
     }
 }
